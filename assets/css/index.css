@@ -54,6 +54,8 @@ main{
     margin:0;
 }
 
+
+
 .circles div.link{
     width:60px;
     height:60px;
@@ -168,8 +170,8 @@ audio{
 
 .container-menu .icon-volume-off{
     float:right;
-    cursor:  pointer !important;
-    display:none;
+    cursor:pointer !important;
+    color:rgba(255,255,255,.2);
 }
 
 .content{
@@ -177,3 +179,4 @@ audio{
     width:100%;
     margin:0 auto;
 }
+p{}
