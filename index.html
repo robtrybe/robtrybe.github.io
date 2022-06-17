@@ -1,24 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+    <head>
+    <title>Portifólio - Robson de Jesus Narcizo</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/favicon.ico"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">   
     <link rel="stylesheet" href="assets/css/fontello.css" /> 
     <link rel="stylesheet" href="assets/css/index.css" />
-    <title>Portifólio - Robson de Jesus Narcizo</title>
+    <script>
+        window.addEventListener('load',()=>{
+            const audio  = new Audio('assets/media/path-to-glory.mp3')
+            audio.addEventListener('ended',(e)=>{
+                e.target.play()
+            })
+
+            audio.volume = 0.5
+
+            const audioButton = document.querySelector('.icon-volume-off')
+            audioButton.addEventListener('click',function(e){
+                const audBtn = e.target
+
+                if(audio.paused || audio.muted ){
+                    audio.muted = false
+                    audio.play()
+                    e.target.className = 'icon-volume-up'
+                }else{
+                    audio.muted = true
+                    e.target.className = 'icon-volume-off'
+                }
+           },false)
+        })
+    </script>
 </head>
 <body>
     <main>
         <div class="container-menu content">
             <span class="icon-page">Portifólio</span>
-            <audio id="audio" src="assets/media/path-to-glory.mp3" muted autoplay="autoplay"></audio>
-            <span class="icon-volume-off" data-playing="false"></span>
+            <audio id="audio" controls autoplay="false" loop >
+                <source src="assets/media/path-to-glory.mp3" type="audio/mpeg" >
+                <p>Your browser does not support HTML5 audio, but you can still</p>
+            </audio>
+            <span class="icon-volume-off" ></span>
         </div>
-        <audio src="assets/media/path-to-glory.mp3" muted id="audio"></audio>
         <div class="circles">
             <div></div>
             <div></div>
