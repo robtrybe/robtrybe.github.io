@@ -11,30 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">   
     <link rel="stylesheet" href="assets/css/fontello.css" /> 
     <link rel="stylesheet" href="assets/css/index.css" />
-    <script>
-        window.addEventListener('load',()=>{
-            const audio  = new Audio('assets/media/path-to-glory.mp3')
-            audio.addEventListener('ended',(e)=>{
-                e.target.play()
-            })
-
-            audio.volume = 0.5
-
-            const audioButton = document.querySelector('.icon-volume-off')
-            audioButton.addEventListener('click',function(e){
-                const audBtn = e.target
-
-                if(audio.paused || audio.muted ){
-                    audio.muted = false
-                    audio.play()
-                    e.target.className = 'icon-volume-up'
-                }else{
-                    audio.muted = true
-                    e.target.className = 'icon-volume-off'
-                }
-           },false)
-        })
-    </script>
+    <script src="assets/js/scripts.js"></script>
 </head>
 <body>
     <main>
